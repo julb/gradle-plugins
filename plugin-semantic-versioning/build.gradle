@@ -1,0 +1,40 @@
+plugins {
+    id 'com.gradle.plugin-publish'
+    id 'groovy'
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+}
+
+dependencies {
+    implementation 'com.github.zafarkhaja:java-semver:0.9.0'
+    implementation 'org.ajoberstar.grgit:grgit-gradle:4.1.0'
+}
+
+gradlePlugin {
+    plugins {
+        semanticVersioningPlugin {
+            id = 'me.julb.gradleplugins.semanticversioning'
+            implementationClass = 'me.julb.gradleplugins.SemanticVersioningPlugin'
+        }
+    }
+}
+
+pluginBundle {
+    plugins {
+        semanticVersioningPlugin {
+            displayName = 'SemVer Plugin'
+            description = 'Provide a set of tasks to read and update version of your Gradle applications, specially in CI/CD.'
+            tags = ['semver', 'versioning', 'release', 'ci']
+            vcsUrl = 'https://github.com/julb/gradle-plugins.git'
+            website = 'https://github.com/julb/gradle-plugins/plugin-semantic-versioning'
+        }
+    }
+}

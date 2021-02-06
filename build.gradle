@@ -1,0 +1,3 @@
+//dependencies {
+//    runtimeOnly subprojects.collect { owner.project(it.path) }
+//}

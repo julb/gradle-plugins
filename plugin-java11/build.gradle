@@ -1,0 +1,35 @@
+plugins {
+    id 'com.gradle.plugin-publish'
+    id 'groovy'
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+}
+
+gradlePlugin {
+    plugins {
+        java11Plugin {
+            id = 'me.julb.gradleplugins.java11'
+            implementationClass = 'me.julb.gradleplugins.Java11Plugin'
+        }
+    }
+}
+
+pluginBundle {
+    plugins {
+        java11Plugin {
+            displayName = 'Java 11 Plugin'
+            description = 'Applies Java 11 toolchain.'
+            tags = ['java11', 'toolchain']
+            vcsUrl = 'https://github.com/julb/gradle-plugins.git'
+            website = 'https://github.com/julb/gradle-plugins/plugin-java11'
+        }
+    }
+}
