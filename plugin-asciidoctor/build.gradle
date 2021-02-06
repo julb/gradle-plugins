@@ -1,0 +1,39 @@
+plugins {
+    id 'com.gradle.plugin-publish'
+    id 'groovy'
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+}
+
+dependencies {
+    implementation 'org.asciidoctor:asciidoctor-gradle-jvm:3.3.0'
+}
+
+gradlePlugin {
+    plugins {
+        asciidoctorPlugin {
+            id = 'me.julb.gradleplugins.asciidoctor'
+            implementationClass = 'me.julb.gradleplugins.AsciidoctorPlugin'
+        }
+    }
+}
+
+pluginBundle {
+    plugins {
+        asciidoctorPlugin {
+            displayName = 'AsciiDoctor with Zip Plugin'
+            description = 'Applies AsciiDoctor plugin and adds a zip task to compress output directory.'
+            tags = ['asciidoctor', 'zip']
+            website = 'https://github.com/julb/gradle-plugins/plugin-asciidoctor'
+            vcsUrl = 'https://github.com/julb/gradle-plugins.git'
+        }
+    }
+}

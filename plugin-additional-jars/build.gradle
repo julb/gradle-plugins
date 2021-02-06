@@ -1,0 +1,35 @@
+plugins {
+    id 'com.gradle.plugin-publish'
+    id 'groovy'
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+}
+
+gradlePlugin {
+    plugins {
+        additionalJarsPlugin {
+            id = 'me.julb.gradleplugins.additionaljars'
+            implementationClass = 'me.julb.gradleplugins.AdditionalJarsPlugin'
+        }
+    }
+}
+
+pluginBundle {
+    plugins {
+        additionalJarsPlugin {
+            displayName = "Additional Jars Plugin"
+            description = 'Add automatically sources and javadoc jars to the Java project. Populates MANIFEST.MF with standard attributes.'
+            tags = ['jar', 'sources', 'javadoc', 'manifest']
+            website = 'https://github.com/julb/gradle-plugins/plugin-additional-jars'
+            vcsUrl = 'https://github.com/julb/gradle-plugins.git'
+        }
+    }
+}

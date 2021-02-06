@@ -1,0 +1,35 @@
+plugins {
+    id 'com.gradle.plugin-publish'
+    id 'groovy'
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+}
+
+gradlePlugin {
+    plugins {
+        aggregateJavadocPlugin {
+            id = 'me.julb.gradleplugins.aggregatejavadoc'
+            implementationClass = 'me.julb.gradleplugins.AggregateJavadocPlugin'
+        }
+    }
+}
+
+pluginBundle {
+    plugins {
+        aggregateJavadocPlugin {
+            displayName = "Javadoc Aggregator Plugin"
+            description = 'Aggregates all the subprojects Javadocs into one target folder.'
+            tags = ['aggregate', 'javadoc']
+            website = 'https://github.com/julb/gradle-plugins/plugin-aggregate-javadoc'
+            vcsUrl = 'https://github.com/julb/gradle-plugins.git'
+        }
+    }
+}
