@@ -74,7 +74,7 @@ jobs:
 
     - name: Publish artifacts
       run: |
-        echo "Publishing..."
+        ./gradlew publishPlugins -Dgradle.publish.key=${{ secrets.GRADLE_PUBLISH_KEY }} -Dgradle.publish.secret=${{ secrets.GRADLE_PUBLISH_SECRET }}
 
     - name: Build Changelog
       id: github_release
