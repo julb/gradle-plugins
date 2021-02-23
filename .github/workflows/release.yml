@@ -19,7 +19,7 @@ jobs:
     - name: Read current version
       id: current_vars
       run: |
-        echo ::set-output name=version::$(./gradlew -q currentVersion)
+        echo ::set-output name=version::$(./gradlew -q currentReleaseVersion)
 
     - name: Compute release vars
       id: release_vars
