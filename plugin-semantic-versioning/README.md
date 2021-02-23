@@ -5,18 +5,18 @@
 This plugin configures a Gradle project to add semantic versioning tasks useful in CI/CD toolchain.
 It relies on the fact that the version of the project is managed through `<project>/gradle.properties` file.
 
-
 ## How to use
 
 Add the following to your `build.gradle`:
 
 ```groovy
 plugins {
-    id 'me.julb.gradleplugins.semanticversioning' version '1.0.0'
+    id 'me.julb.gradleplugins.semanticversioning' version '1.0.1'
 }
 ```
 
 And configure the version in `gradle.properties`:
+
 ```properties
 version=1.0.0
 ```
@@ -29,6 +29,23 @@ The following tasks will be made available:
 $ ./gradlew currentVersion
 > Task :currentVersion
 1.0.0
+```
+
+- `currentReleaseVersion` : this task will print the current release project version in `stdout`.
+
+```bash
+$ ./gradlew currentReleaseVersion
+> Task :currentReleaseVersion
+1.0.0
+
+$ ./gradlew changeVersionPatch
+> Task :changeVersionPatch
+[Julb] Asked to update version with parameter <Patch>
+[Julb] New project version is 1.0.1-SNAPSHOT
+
+$ ./gradlew currentReleaseVersion
+> Task :currentReleaseVersion
+1.0.1
 ```
 
 - `currentBuildVersion` : this task will print the current project version and the abbreviated git sha1 in `stdout`.

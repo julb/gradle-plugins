@@ -54,7 +54,7 @@ class SemanticVersioningPlugin implements Plugin<Project> {
         rootProject.plugins.apply(GrgitPlugin)
         
         def latestCommit = rootProject.grgit.head()
-        def releaseVersion = rootProject.version.replaceAll('-' + SNAPSHOT_SUFFIX, '')
+        def releaseVersionValue = rootProject.version.replaceAll('-' + SNAPSHOT_SUFFIX, '')
     	
     	rootProject.ext {
 	    	// Add git properties.
@@ -64,17 +64,25 @@ class SemanticVersioningPlugin implements Plugin<Project> {
     	    gitAuthorEmail = latestCommit.author.email
     	    
 	    	// Add build version.
-    	    buildVersion = releaseVersion + '.' + gitShortRevision
+    	    releaseVersion = releaseVersionValue
+    	    buildVersion = releaseVersionValue + '.' + gitShortRevision
     	}
 
         
 
         rootProject.gradle.projectsEvaluated {
         
-			// Displays the current version.
+	        // Displays the current version.
         	rootProject.task('currentVersion', description: 'Display the project version') {
 	            doLast {
 	            	println "$project.version"
+	            }
+	        }
+        
+	        // Displays the current release version.
+        	rootProject.task('currentReleaseVersion', description: 'Display the project release version') {
+	            doLast {
+	            	println "$project.releaseVersion"
 	            }
 	        }
 	        
@@ -102,7 +110,7 @@ class SemanticVersioningPlugin implements Plugin<Project> {
 		                        }
 		                        newVersion = rootProject.newVersion
 		                    } else if(changeVersionMode.equals('Release')) {
-		                        newVersion = releaseVersion
+		                        newVersion = releaseVersionValue
 		                    } else {
 		                        def semverVersion = Version.valueOf(rootProject.version)
 		                        if(changeVersionMode.equals('Major')) {
