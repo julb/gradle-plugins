@@ -36,7 +36,7 @@ jobs:
       run: ./gradlew build
 
     - name: Updating file versions
-      run: ./gradlew changeVersionCustom -PnewVersion={{ steps.release_vars.outputs.version }}
+      run: ./gradlew changeVersionCustom -PnewVersion=${{ steps.release_vars.outputs.version }}
 
     - name: Update CHANGELOG.md
       uses: heinrichreimer/github-changelog-generator-action@v2.2
@@ -74,7 +74,7 @@ jobs:
 
     - name: Publish artifacts
       run: |
-        ./gradlew publishPlugins -Dgradle.publish.key=${{ secrets.GRADLE_PUBLISH_KEY }} -Dgradle.publish.secret=${{ secrets.GRADLE_PUBLISH_SECRET }}
+        echo "Publishing..."
 
     - name: Build Changelog
       id: github_release
