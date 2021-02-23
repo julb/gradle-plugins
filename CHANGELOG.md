@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.3](https://github.com/julb/gradle-plugins/tree/1.0.3) (2021-02-23)
+
+[Full Changelog](https://github.com/julb/gradle-plugins/compare/1.0.2...1.0.3)
+
+**Closed issues:**
+
+- Package the plugins in target Java 8 [\#7](https://github.com/julb/gradle-plugins/issues/7)
+
+**Merged pull requests:**
+
+- Package the plugins with Java 8 compliance [\#8](https://github.com/julb/gradle-plugins/pull/8) ([julb](https://github.com/julb))
+
 ## [1.0.2](https://github.com/julb/gradle-plugins/tree/1.0.2) (2021-02-23)
 
 [Full Changelog](https://github.com/julb/gradle-plugins/compare/1.0.1...1.0.2)
