@@ -1,14 +1,25 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+## [1.0.1](https://github.com/julb/gradle-plugins/tree/1.0.1) (2021-02-23)
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+[Full Changelog](https://github.com/julb/gradle-plugins/compare/1.0.0...1.0.1)
 
-## [Unreleased]
+**Closed issues:**
 
-## [1.0.0] - 2021-02-06
+- Add a :currentReleaseVersion task in semanticversioning plugin [\#3](https://github.com/julb/gradle-plugins/issues/3)
+- Add additionaljars, aggregateJavadoc, asciidoctor, java11 and semver plugin [\#1](https://github.com/julb/gradle-plugins/issues/1)
 
-### Added
+**Merged pull requests:**
 
-- Initial version of the project.
+- Add a :currentReleaseVersion task to semanticversioning plugin [\#4](https://github.com/julb/gradle-plugins/pull/4) ([julb](https://github.com/julb))
+
+## [1.0.0](https://github.com/julb/gradle-plugins/tree/1.0.0) (2021-02-06)
+
+[Full Changelog](https://github.com/julb/gradle-plugins/compare/4ebbd63dc3068641d475757d92f20e65b2a9885d...1.0.0)
+
+**Merged pull requests:**
+
+- Add additionaljars, aggregateJavadoc, asciidoctor, java11 and semver … [\#2](https://github.com/julb/gradle-plugins/pull/2) ([julb](https://github.com/julb))
+
+
+
