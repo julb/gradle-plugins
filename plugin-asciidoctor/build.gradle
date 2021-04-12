@@ -20,7 +20,7 @@ java {
 }
 
 dependencies {
-    implementation 'org.asciidoctor:asciidoctor-gradle-jvm:3.3.0'
+    implementation 'org.asciidoctor:asciidoctor-gradle-jvm:3.3.2'
 }
 
 gradlePlugin {
