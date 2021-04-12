@@ -6,6 +6,7 @@ pluginManagement {
 
 include 'plugin-additional-jars'
 include 'plugin-aggregate-javadoc'
+include 'plugin-aggregate-springdocopenapidocs'
 include 'plugin-asciidoctor'
 include 'plugin-java11'
 include 'plugin-semantic-versioning'

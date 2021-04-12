@@ -11,7 +11,7 @@ Add the following to your `build.gradle`:
 
 ```groovy
 plugins {
-    id 'me.julb.gradleplugins.aggregatejavadoc' version '1.0.2'
+    id 'me.julb.gradleplugins.aggregatejavadoc' version '1.0.4'
 }
 
 aggregateJavadoc {
