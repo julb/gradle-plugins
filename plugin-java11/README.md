@@ -10,6 +10,6 @@ Add the following to your `build.gradle`:
 
 ```groovy
 plugins {
-    id 'me.julb.gradleplugins.java11' version '1.0.2'
+    id 'me.julb.gradleplugins.java11' version '1.0.4'
 }
 ```
