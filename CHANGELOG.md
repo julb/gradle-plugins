@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.5](https://github.com/julb/gradle-plugins/tree/1.0.5) (2021-05-11)
+
+[Full Changelog](https://github.com/julb/gradle-plugins/compare/1.0.4...1.0.5)
+
+**Merged pull requests:**
+
+- Rollback to Gradle 6.x as ant.propertyfile is failing [\#15](https://github.com/julb/gradle-plugins/pull/15) ([julb](https://github.com/julb))
+
 ## [1.0.4](https://github.com/julb/gradle-plugins/tree/1.0.4) (2021-04-12)
 
 [Full Changelog](https://github.com/julb/gradle-plugins/compare/1.0.3...1.0.4)
