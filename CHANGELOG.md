@@ -1,8 +1,16 @@
 # Changelog
 
+## [1.0.6](https://github.com/julb/gradle-plugins/tree/1.0.6) (2021-06-04)
+
+[Full Changelog](https://github.com/julb/gradle-plugins/compare/1.0.5...1.0.6)
+
+**Merged pull requests:**
+
+- Upgrade to Gradle 7.0.2 [\#16](https://github.com/julb/gradle-plugins/pull/16) ([julb](https://github.com/julb))
+
 ## [1.0.5](https://github.com/julb/gradle-plugins/tree/1.0.5) (2021-05-11)
 
-[Full Changelog](https://github.com/julb/gradle-plugins/compare/1.0.4...1.0.5)
+[Full Changelog](https://github.com/julb/gradle-plugins/compare/latest...1.0.5)
 
 **Merged pull requests:**
 
