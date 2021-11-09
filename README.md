@@ -11,6 +11,7 @@ This project is a mono-repo providing custom Gradle plugins:
 - [me.julb.gradleplugins.aggregatespringdocopenapidocs](./plugin-aggregate-springdocopenapidocs/README.md)
 - [me.julb.gradleplugins.asciidoctor](./plugin-asciidoctor/README.md)
 - [me.julb.gradleplugins.java11](./plugin-java11/README.md)
+- [me.julb.gradleplugins.java17](./plugin-java17/README.md)
 - [me.julb.gradleplugins.semanticversioning](./plugin-semantic-versioning/README.md)
 
 ## How to develop

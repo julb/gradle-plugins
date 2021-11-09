@@ -9,10 +9,12 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-    - name: Set up Java 11
-      uses: actions/setup-java@v1
+    - name: Set up Java 17
+      uses: actions/setup-java@v2
       with:
-        java-version: 11
+        java-version: 17
+        distribution: 'temurin'
+        cache: 'gradle'
 
     - uses: actions/checkout@v2
     
@@ -33,7 +35,7 @@ jobs:
       run: echo "NOOP."
 
     - name: Testing
-      run: ./gradlew build
+      run: ./gradlew build --no-daemon
 
     - name: Updating file versions
       run: ./gradlew changeVersionCustom -PnewVersion=${{ steps.release_vars.outputs.version }}
