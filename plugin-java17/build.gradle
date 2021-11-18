@@ -1,0 +1,40 @@
+plugins {
+    id 'com.gradle.plugin-publish'
+    id 'groovy'
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+gradlePlugin {
+    plugins {
+        java17Plugin {
+            id = 'me.julb.gradleplugins.java17'
+            implementationClass = 'me.julb.gradleplugins.Java17Plugin'
+        }
+    }
+}
+
+pluginBundle {
+    plugins {
+        java17Plugin {
+            displayName = 'Java 17 Plugin'
+            description = 'Applies Java 17 toolchain.'
+            tags = ['java17', 'toolchain']
+            vcsUrl = 'https://github.com/julb/gradle-plugins.git'
+            website = 'https://github.com/julb/gradle-plugins/plugin-java17'
+        }
+    }
+}
