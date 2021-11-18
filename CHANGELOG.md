@@ -1,8 +1,16 @@
 # Changelog
 
+## [1.0.7](https://github.com/julb/gradle-plugins/tree/1.0.7) (2021-11-18)
+
+[Full Changelog](https://github.com/julb/gradle-plugins/compare/1.0.6...1.0.7)
+
+**Merged pull requests:**
+
+- Add plugin to configure java 17 on a Gradle project [\#17](https://github.com/julb/gradle-plugins/pull/17) ([julb](https://github.com/julb))
+
 ## [1.0.6](https://github.com/julb/gradle-plugins/tree/1.0.6) (2021-06-04)
 
-[Full Changelog](https://github.com/julb/gradle-plugins/compare/1.0.5...1.0.6)
+[Full Changelog](https://github.com/julb/gradle-plugins/compare/latest...1.0.6)
 
 **Merged pull requests:**
 
@@ -10,7 +18,7 @@
 
 ## [1.0.5](https://github.com/julb/gradle-plugins/tree/1.0.5) (2021-05-11)
 
-[Full Changelog](https://github.com/julb/gradle-plugins/compare/latest...1.0.5)
+[Full Changelog](https://github.com/julb/gradle-plugins/compare/1.0.4...1.0.5)
 
 **Merged pull requests:**
 
