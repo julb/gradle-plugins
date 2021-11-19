@@ -13,6 +13,7 @@ This project is a mono-repo providing custom Gradle plugins:
 - [me.julb.gradleplugins.java11](./plugin-java11/README.md)
 - [me.julb.gradleplugins.java17](./plugin-java17/README.md)
 - [me.julb.gradleplugins.semanticversioning](./plugin-semantic-versioning/README.md)
+- [me.julb.gradleplugins.spring-native-aws-lambda](./plugin-spring-native-aws-lambda/README.md)
 
 ## How to develop
 

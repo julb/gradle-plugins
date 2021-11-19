@@ -11,7 +11,7 @@ Add the following to your `build.gradle`:
 
 ```groovy
 plugins {
-    id 'me.julb.gradleplugins.aggregatespringdocopenapidocs' version '1.0.5'
+    id 'me.julb.gradleplugins.aggregatespringdocopenapidocs' version '1.0.8'
 }
 
 aggregateSpringDocOpenApiDocs {
