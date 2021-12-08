@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.8](https://github.com/julb/gradle-plugins/tree/1.0.8) (2021-12-08)
+
+[Full Changelog](https://github.com/julb/gradle-plugins/compare/1.0.7...1.0.8)
+
+**Merged pull requests:**
+
+- Create plugin to package Native lambda [\#18](https://github.com/julb/gradle-plugins/pull/18) ([julb](https://github.com/julb))
+
 ## [1.0.7](https://github.com/julb/gradle-plugins/tree/1.0.7) (2021-11-18)
 
 [Full Changelog](https://github.com/julb/gradle-plugins/compare/1.0.6...1.0.7)
@@ -10,7 +18,7 @@
 
 ## [1.0.6](https://github.com/julb/gradle-plugins/tree/1.0.6) (2021-06-04)
 
-[Full Changelog](https://github.com/julb/gradle-plugins/compare/latest...1.0.6)
+[Full Changelog](https://github.com/julb/gradle-plugins/compare/1.0.5...1.0.6)
 
 **Merged pull requests:**
 
