@@ -1,0 +1,51 @@
+plugins {
+    id 'com.gradle.plugin-publish'
+    id 'java'
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+    maven {
+        url 'https://repo.spring.io/release'
+    }
+    maven {
+        url 'https://repo.spring.io/milestone'
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
+dependencies {
+    implementation 'org.springframework.experimental:spring-aot-gradle-plugin:0.11.0-RC1'
+    implementation 'org.graalvm.buildtools:native-gradle-plugin:0.9.8'
+}
+
+gradlePlugin {
+    plugins {
+        asciidoctorPlugin {
+            id = 'me.julb.gradleplugins.spring-native-aws-lambda'
+            implementationClass = 'me.julb.gradleplugins.SpringNativeAwsLambdaPlugin'
+        }
+    }
+}
+
+pluginBundle {
+    plugins {
+        asciidoctorPlugin {
+            displayName = 'Spring Native with AWS Lambda Zip Plugin'
+            description = 'Produces an archive for a Lambda built with Spring Native deployable to AWS.'
+            tags = ['aws', 'spring-native', 'lambda', 'zip']
+            website = 'https://github.com/julb/gradle-plugins/plugin-spring-native-aws-lambda'
+            vcsUrl = 'https://github.com/julb/gradle-plugins.git'
+        }
+    }
+}

@@ -1,6 +1,6 @@
 plugins {
     id 'com.gradle.plugin-publish'
-    id 'groovy'
+    id 'java'
     id 'java-gradle-plugin'
     id 'maven-publish'
 }

@@ -1,6 +1,6 @@
 pluginManagement {
     plugins {
-        id 'com.gradle.plugin-publish' version '0.15.0'
+        id 'com.gradle.plugin-publish' version '0.18.0'
     }
 }
 
@@ -11,3 +11,4 @@ include 'plugin-asciidoctor'
 include 'plugin-java11'
 include 'plugin-java17'
 include 'plugin-semantic-versioning'
+include 'plugin-spring-native-aws-lambda'
