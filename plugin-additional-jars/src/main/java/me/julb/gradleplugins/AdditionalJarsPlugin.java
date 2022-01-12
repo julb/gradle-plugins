@@ -31,9 +31,11 @@ import java.util.Map;
 
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
+import org.gradle.api.tasks.compile.JavaCompile;
 import org.gradle.api.plugins.JavaPlugin;
 import org.gradle.api.plugins.JavaPluginExtension;
 import org.gradle.api.tasks.bundling.Jar;
+
 import org.gradle.util.GradleVersion;
 
 
@@ -58,6 +60,9 @@ public class AdditionalJarsPlugin implements Plugin<Project> {
                 JavaPluginExtension javaPluginExtension = project.getExtensions().getByType(JavaPluginExtension.class);
                 javaPluginExtension.withSourcesJar();
                 javaPluginExtension.withJavadocJar();
+
+                // Add dependency for gradle.
+                project.getTasks().withType(Jar.class).getByName("sourcesJar").dependsOn(project.getTasks().withType(JavaCompile.class));
 
                 project.getTasks().withType(Jar.class).all(jarTask -> {
                     jarTask.manifest(manifest -> {
